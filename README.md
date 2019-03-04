@@ -1,6 +1,13 @@
-# Your custom Twilio Flex Plugin
+# Twilio Flex Plugin: Override Set Activity
 
-Twilio Flex Plugins allow you to customize the apperance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+## Overview
+The Flex UI does not currently allow users to change to a non-Idle/Available activity while they have pending reservations. However, the udpate worker REST API does support rejecting pending reservations when changing the worker's activity.
+
+This Flex plugin overrides the SetActivity action to allow users to change their activity to Offline even if they have pending reservations. To do that, it depends on the Twilio function in this repo:
+
+https://github.com/trogers-twilio/function-set-worker-activity
+
+Once that function is deployed, this plugin can be tested, built, and deployed.
 
 ## Setup
 
